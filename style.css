@@ -5,6 +5,9 @@
 	list-style: none;
 	box-sizing:border-box;
 }
+a{
+	color: inherit;
+}
 @font-face{
 	font-family: "grndst";
 	src: url('typo/Grandstander-Black.ttf');
