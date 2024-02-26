@@ -22,14 +22,12 @@
 }
 body{
 	font-family: "grotesk", sans-serif;
-	background: #FFE8C8;
-	color: #002657;
+	/*background: #FFE8C8;
+	color: #002657;*/
 }
 h1,h2,h3,h4,h5,a{
 	font-family: "grndst";
-	background: url(img/bg.jpg) 0 0 / cover no-repeat;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	color: black;
 	text-transform: uppercase;
 }
 p{
@@ -39,6 +37,8 @@ nav{
 	position: fixed;
 	width: 100%;
 	z-index: 999;
+	background: lightgrey;
+	padding-bottom: 50px;
 }
 nav ul{
 	display: grid;
@@ -52,10 +52,10 @@ nav ul{
 }
 nav ul li{
 	align-self: center;
-	-webkit-text-stroke: 1.5px #002657; 
-	color: #FFAF68;
+	/*-webkit-text-stroke: 1.5px #002657; 
+	color: #FFAF68;*/
 }
-nav ul li:hover{
+nav ul li hover{
 	-webkit-text-stroke: 2px black; 
 }
 nav li img{
@@ -70,31 +70,41 @@ nav li img{
 }
 #menuBtn{
 	cursor:pointer;
+	display: none;
 }
 #menu{
-	width: 100vw;
-	height: 100vh;
-	position: fixed;
+	width: 80%;
 	top: 0px;
-	left: 0px;
+	margin: 0 auto;
 	font-family: "grndst";
 	font-weight: 900;
-	font-size: 3em;
-	align-self: center;
-	color: white;
+	color: black;
 	text-align: center;
-	padding-top: 150px;
-	background: url("img/menu.jpg") #FFE8C8;
-	background-size:cover ;
 	z-index: 998;
+	display: block;
+	height: 20px;
+
+}
+.submenu{
+	position: absolute;
+	left: 0px;
+	background: lightgrey;
 	display: none;
+	line-height: 1.5em;
+	padding-top: 10px;
 }
 #menu li{
 	margin-bottom: 1.3em;
 	cursor: pointer;
+	display: inline-block;
+	position: relative;
 }
-#menu li:hover{
-	-webkit-text-stroke: 4px #002657; 
+#menu li ul{
+	display: none;
+	color: black;
+}
+#menu li:hover .submenu{
+	display: block;
 }
 #cont{
 	width: 70%;
@@ -133,22 +143,33 @@ nav li img{
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	filter:contrast(150%);
 	z-index: 0;
 }
 section p{
-	width: 50%;
 	margin: 0 auto;
 	margin-top: 10px;
 	font-size: 1.2em;
+	max-width: 600px;
+
 }
 section{
+	margin-bottom: 50px;
+}
+.gridText{
 	margin-top: 50px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+	column-gap: 50px;
+	row-gap: 50px;
+	margin-bottom: 50px;
+}
+.gridText p{
+	width: 100%!important;
 }
 .form{
 	height: 400px;
+	width: 100%;
 	background: grey;
-	width: 40%;
 	margin: 20px auto 0 auto;
 }
 .grid{
@@ -173,6 +194,7 @@ section h1{
 section img{
 	max-height: 500px;
 	object-fit: cover;
+	width: 100%;
 }
 footer{
 	display: grid;
@@ -186,4 +208,11 @@ footer ul{
 }
 footer li img{
 	max-height: 50px;
+}
+
+
+@media only screen and (max-width: 500px) {
+	#menuBtn{
+		display: inline-block;
+	}
 }
