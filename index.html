@@ -3,125 +3,59 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>Stamm Studio</title>
-
+	<title>Stamm Studio - Site en contruction</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: url('back.jpg');
+			font-family: "urbanist";
+		}
+		#cont{
+			background: white;
+			min-width: 90vw;
+			min-height: 90vh;
+			margin: 0 auto;
+			margin-top: 50px;
+			border: solid 6px #ED9902;
+			text-align: center;
+			padding: 20px;
+			overflow: hidden;
+		}
+		section{
+			width: 100%;
+			height: 100%;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+		}
+		iframe{
+			height: 500px;
+			width: 100%;
+		}
+		.spacer{
+			height: 50px;
+			width: 100%;
+		}
+		@font-face{
+			font-family: "urbanist";
+			src: url('Urbanist-Black.ttf');
+		}
+		h1{
+			font-size: 3em;
+		}
+	</style>
 </head>
 <body>
-	<nav>
-		<ul>
-			<li id="menuBtn" onclick="openMenu()">MENU</li>
-			<li><img src="logo.png" /></li>
-			<li><span class="lng active">FR</span>/<span class="lng">EN</span></li>
-		</ul>
-		<div id="menu">
-			<ul>
-				<li><a href="index.html">Accueil</a></li>
-				<li><a href="stamm.html">Le Stamm</a>
-					<div class="submenu">
-						<a>Le Lieu</a>
-						<a>Fiche Technique</a>
-						<a>L'Équipe</a>
-						<a>Historique</a>
-					</div>
-				</li>
-				<li><a href="reservations.html">Réservation</a></li>
-				<li><a href="evenements.html">Événements</a></li>
-				<li><a href="benevoles.html">Bénévoles</a></li>
-				<li><a href="pratique.html">Pratique</a>
-					<div class="submenu">
-						<a>Situation</a>
-						<a>Fiche Technique</a>
-						<a>L'Équipe</a>
-						<a>Historique</a>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</nav>
-	
-	<div class="spacer"></div>
 	<div id="cont">
-
+		<h1>Stamm Studio</h1>
+		<div class="spacer"></div>
+		<p>Actuelment le site est en contruction.<br/>Pour réserver une résidence veillez nous contacter à <a href="mailto:info@stammstudio.com">info@stammstudio.com</a>
+			<div class="spacer"></div>
 		<section>
-			<div class="slideshow-container">
-				
-				  <div class="mySlides">
-				    <img src="img/salle.jpg">
-				  </div>
-				  <div class="mySlides">
-				    <img src="img/cuisine.jpg">
-				  </div>
-				  <div class="mySlides">
-				    <img src="img/chambre.jpg">
-				  </div>
-			</div>
-			<h1>UN ESPACE DE CREATION<br/>ET DE TRANSMISSION</h1>
+			<iframe id="calendar" style="display:block; margin:20px auto 0 auto;" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FZurich&&showCalendars=0&showTabs=0&showPrint=0&title&src=aW5mb0BzdGFtbXN0dWRpby5jb20&color=%233F51B5" style="border-width:0" frameborder="0" scrolling="no"></iframe>
 		</section>
-
-		<section>
-			<p>
-				Le Stamm Studio est un espace dédié aux artistes et à la réalisation de tout type de projets culturels.<br/><br/>Disponible à la location à des tarifs avantageux et flexibles, le Stamm est l'endroit idéal pour vos résidences artistiques, répétitions, workshop et ateliers. Toute initiative événementielle est également la bienvenue !
-			</p>
-		</section>
-
-		<section>
-			<h1>Événements à venir</h1>
-			<div class="grid">
-				<div class="item">
-					<h2>Titre</h2>
-					<img src=""/>
-				</div>
-
-				<div class="item">
-					<h2>Titre</h2>
-					<img src=""/>
-				</div>
-
-				<div class="item">
-					<h2>Titre</h2>
-					<img src=""/>
-				</div>
-			</div>
-		</section>
-
-		<section>
-			<h1>Actualités</h1>
-			<div class="grid">
-				<div class="item">
-					<h2>Titre</h2>
-					<img src=""/>
-				</div>
-
-				<div class="item">
-					<h2>Titre</h2>
-					<img src=""/>
-				</div>
-
-				<div class="item">
-					<h2>Titre</h2>
-					<img src=""/>
-				</div>
-			</div>
-		</section>
-
-		
-
-		<footer>
-			<ul>
-				<li>Route de Courgenay 21</li>
-				<li>2900 Porrentruy</li>
-				<li>Jura – Suisse</li>
-			</ul>
-			<ul>
-				<li><img src="img/mail.png" /></li>
-			</ul>
-			<ul>
-				<li><img src="img/fb.png" />     <img style="width:20%" src="img/insta.png" /></li></ul>
-		</footer>
 	</div>
-		
-	</div>
-	<script src="main.js"></script>
 </body>
 </html>
