@@ -3,59 +3,65 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Stamm Studio - Site en contruction</title>
-	<style>
-		*{
-			margin: 0;
-			padding: 0;
-		}
-		body{
-			background: url('back.jpg');
-			font-family: "urbanist";
-		}
-		#cont{
-			background: white;
-			min-width: 90vw;
-			min-height: 90vh;
-			margin: 0 auto;
-			margin-top: 50px;
-			border: solid 6px #ED9902;
-			text-align: center;
-			padding: 20px;
-			overflow: hidden;
-		}
-		section{
-			width: 100%;
-			height: 100%;
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-		}
-		iframe{
-			height: 500px;
-			width: 100%;
-		}
-		.spacer{
-			height: 50px;
-			width: 100%;
-		}
-		@font-face{
-			font-family: "urbanist";
-			src: url('Urbanist-Black.ttf');
-		}
-		h1{
-			font-size: 3em;
-		}
-	</style>
+	<title>Stamm Studio - Accueil</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
+
+<script> var page='Accueil';</script>
 <body>
-	<div id="cont">
-		<h1>Stamm Studio</h1>
-		<div class="spacer"></div>
-		<p>Actuelment le site est en contruction.<br/>Pour réserver une résidence veillez nous contacter à <a href="mailto:info@stammstudio.com">info@stammstudio.com</a>
-			<div class="spacer"></div>
+		<nav>
+		<div id="back"></div>
+		<div id="line"></div>
+			<h1>STAMM STUDIO</h1>
+		<ul>
+			<li class='active'><a href="/stammstudio/">Accueil</a></li>
+			<li class=''><a href='/stammstudio/le-stamm/'> Le Stamm</a></li><li class=''><a href='/stammstudio/reservations/'> Réservations</a></li><li class=''><a href='/stammstudio/evenements/'> Évènements</a></li><li class=''><a href='/stammstudio/benevoles/'> Bénévoles</a></li><li class=''><a href='/stammstudio/pratique/'> Pratique</a></li>		</ul>
+	</nav>
+<div id="cont">
+	<div class="spacer"></div>
+	<section>
+			<div class="slideshow-container">
+				  <div class="mySlides">
+				  		 <img src="chambre.jpg"/>
+				  		</div><div class="mySlides">
+				  		 <img src="cuisine.jpg"/>
+				  		</div><div class="mySlides">
+				  		 <img src="sallon.jpg"/>
+				  		</div><div class="mySlides">
+				  		 <img src="salle.jpg"/>
+				  		</div>			</div>
+			<h1 class="right" style="font-weight: 200;">UN ESPACE DE<br/>ET DE</h1><h1> CREATION<br/>TRANSMISSION</h1>
+	</section>
+
 		<section>
-			<iframe id="calendar" style="display:block; margin:20px auto 0 auto;" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FZurich&&showCalendars=0&showTabs=0&showPrint=0&title&src=aW5mb0BzdGFtbXN0dWRpby5jb20&color=%233F51B5" style="border-width:0" frameborder="0" scrolling="no"></iframe>
+			<div class="marger">
+				<p>
+					Le Stamm Studio est un espace dédié aux artistes et à la réalisation de tout type de projets culturels.<br/>Disponible à la location à des tarifs avantageux et flexibles, le Stamm est l'endroit idéal pour vos résidences artistiques, répétitions, workshop et ateliers. Toute initiative événementielle est également la bienvenue !
+				</p>
+			</div>
 		</section>
+
+		<section>
+				<h2>Évènements <span>à venir</span><span class='underline'></span></h2><div class='grid'><a href='/stammstudio/evenements/soiree-25-20-20/'><h2>soirée 25 20 20</h2><img src='menu.png'/></a><a href='/stammstudio/evenements/soiree-45-20-01/'><h2>soirée 45 20 01</h2><img src='menu.png'/></a><a href='/stammstudio/evenements/soiree-3-2-1/'><h2>soirée 3 2 1</h2><img src='menu.png'/></a>			</div>
+		</section>
+
+		<section>
+			
+			<h2 class='right'><span>Les</span> Actus <span>du stamm</span><span class='underline-right'></span></h2><div class='grid'><a href='/stammstudio/actus/truc-1/'><h2>truc 1</h2><img src='menu.png'/></a><a href='/stammstudio/actus/truc-2/'><h2>truc 2</h2><img src='menu.png'/></a><a href='/stammstudio/actus/truc-3/'><h2>truc 3</h2><img src='menu.png'/></a>			</div>
+		</section>
+		<footer>
+			<ul>
+				<li>Route de Courgenay 21</li>
+				<li>2900 Porrentruy</li>
+				<li>Jura – Suisse</li>
+			</ul>
+			<ul>
+				<li id="logo"><img src="logo.png" /></li>
+			</ul>
+			<ul>
+				<li><img src="fb.png" />     <img src="insta.png" /></li></ul>
+		</footer>
 	</div>
+<script src="main.js"></script>
 </body>
 </html>
