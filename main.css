@@ -4,6 +4,9 @@
 	text-decoration: none;
 	box-sizing:border-box;
 }
+#topnav,#headline,#content{
+	display: none;
+}
 @font-face{
 	font-family: "urbanist";
 	src: url('fonts/Urbanist-Regular.ttf');
@@ -15,10 +18,16 @@
 	font-weight: 200;
 }
 body{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
 	font-family: "urbanist", sans-serif;
 	background: url('back.jpg');
 	overflow: hidden;
 	color: black;
+}
+html,body {
+  scroll-behavior:none;
 }
 a{
 	text-decoration: none;
@@ -41,12 +50,13 @@ nav{
 .submenu{
 	position: absolute;
 	left: 0px;
-	top: 20px;
+	top: 25px;
 	width: 100%;
 	display: none;
 	line-height: 1.5em;
 	padding-top: 10px;
 	z-index: 9999;
+	font-size: 1em;
 }
 #back{
 	position: absolute;
@@ -111,7 +121,6 @@ nav li:hover .submenu{
 	height: 100px;
 	width: 100%;
 }
-
 #cont{
 	background: white;
 	max-width: 90vw;
@@ -123,6 +132,9 @@ nav li:hover .submenu{
 	overflow-y: scroll;
 	-ms-overflow-style: none;  /* IE and Edge */
   	scrollbar-width: none;  /* Firefox */
+  scroll-behavior: smooth;
+  position: relative;
+  z-index: -9999;
 }
 #cont::-webkit-scrollbar {
   display: none;
@@ -130,6 +142,7 @@ nav li:hover .submenu{
 
 section{
 	margin-bottom: 80px;
+	padding-top: 40px;
 }
 section h1{
 	font-size: 4em;
@@ -150,6 +163,7 @@ section h2{
 section ul{
 	list-style: square !important;
 	font-size: 1.2em;
+	line-height: 2em;
 }
 .right{
 	text-align: right;
@@ -182,7 +196,23 @@ section h2 span{
 section .marger{
 	width: 80%;
 	margin: 0 auto;
+	position: relative;
 }
+.marger p{
+	width: 50%;
+}
+
+.ilus{
+	z-index:-99;
+	position: absolute;
+	right: -200px;
+	top:-200px;
+	height: 100%;
+}
+.ilus img{
+	width: 900px;
+}
+
 /*--slider--*/
 
 .slideshow-container {
@@ -228,25 +258,41 @@ section .marger{
 	margin: 0 auto;
 	width: 80%;
 }
-
+.survol{
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: #bf4133; /*#ED9902*/
+	background-image: url('ilus/carrée.png');
+	background-position: center;
+	background-repeat: no-repeat;
+}
 .grid a{
 	border: 3px solid #ED9902;
 	position: relative;
+	background: white;
+}
+.grid a:hover .survol{
+	display: block;
 }
 .grid h2{
 	position: absolute;
 	left: 5px;
 }
-.grid img, .grid2 img{
+.grid img, .grid2 img,.survol{
 	width: 100%;
+	height: 100%;
 	object-fit: cover;
 }
 .grid2{
 	margin-top: 30px;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-	align-items: center;
+	align-items: start;
 	justify-items: center;
+	width: 80%;
+	margin: 0 auto;
 }
 
 
